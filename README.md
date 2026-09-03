@@ -10,6 +10,10 @@ Prime Explorer uses Python and Flask for mathematical processing and API endpoin
 
 Prime numbers are generated using the **Sieve of Eratosthenes**, while individual numbers can be tested using a separate primality-checking algorithm.
 
+## Preview
+
+![Prime Explorer interface](images/prime-explorer-preview.png)
+
 ## Features
 
 - Generate all prime numbers up to a specified limit
@@ -166,7 +170,7 @@ prime-explorer/
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/joakim-silva/prime-explorer.git
 cd prime-explorer
 ```
 
@@ -281,6 +285,20 @@ Possible future additions include:
 - Visualisation of prime-number distributions
 - Improved handling of extremely large ranges
 - More advanced algorithms for large prime calculations
+
+## Deployment
+
+Prime Explorer is deployed as a Python web service using Render.
+
+The production application is served using Gunicorn:
+
+```bash
+gunicorn app:app
+```
+
+The live application is available at:
+
+https://prime-explorer.onrender.com/
 
 ## Author
 
