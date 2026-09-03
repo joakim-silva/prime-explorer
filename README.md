@@ -1,8 +1,12 @@
 # Prime Explorer
 
-Prime Explorer is a full-stack web application for generating, exploring, checking and exporting prime numbers.
+A full-stack web application for generating, exploring, checking and exporting prime numbers.
 
-The application uses Python and Flask for mathematical processing and API endpoints, with JavaScript providing an interactive browser interface.
+**Live Demo:** https://prime-explorer.onrender.com/
+
+**GitHub Repository:** https://github.com/joakim-silva/prime-explorer
+
+Prime Explorer uses Python and Flask for mathematical processing and API endpoints, with JavaScript providing an interactive browser interface.
 
 Prime numbers are generated using the **Sieve of Eratosthenes**, while individual numbers can be tested using a separate primality-checking algorithm.
 
