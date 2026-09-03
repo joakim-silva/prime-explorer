@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Prime Explorer generates, analyses and exports prime numbers."
+    >
+
+    <title>
+        Prime Explorer
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <h1>
+            Prime Explorer
+        </h1>
+
+        <p>
+            Generate, explore and export prime numbers.
+        </p>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             PRIME GENERATOR
+             ================================================= -->
+
+        <section class="tool-card">
+
+
+            <!-- ---------- Heading ---------- -->
+
+            <div class="tool-heading">
+
+                <span class="tool-label">
+                    PRIME GENERATOR
+                </span>
+
+                <h2>
+                    Generate Prime Numbers
+                </h2>
+
+                <p>
+                    Find every prime number up to a limit
+                    of your choice.
+                </p>
+
+            </div>
+
+
+            <!-- ---------- Generator Form ---------- -->
+
+            <form id="prime-form">
+
+                <label for="prime-limit">
+                    Generate primes up to
+                </label>
+
+                <div class="input-group">
+
+                    <input
+                        type="number"
+                        id="prime-limit"
+                        name="limit"
+                        min="2"
+                        max="10000000"
+                        step="1"
+                        value="1000"
+                        required
+                    >
+
+                    <button type="submit">
+                        Generate
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- ---------- Generator Messages ---------- -->
+
+            <div
+                class="form-message"
+                id="generator-message"
+                hidden
+            ></div>
+
+
+            <!-- ---------- Results Summary ---------- -->
+
+            <div
+                class="results-summary"
+                id="results-summary"
+                hidden
+            >
+
+
+                <div class="stat">
+
+                    <span class="stat-label">
+                        Limit
+                    </span>
+
+                    <strong id="limit-stat">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span class="stat-label">
+                        Primes Found
+                    </span>
+
+                    <strong id="count-stat">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span class="stat-label">
+                        Largest Prime
+                    </span>
+
+                    <strong id="largest-stat">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span class="stat-label">
+                        Calculation Time
+                    </span>
+
+                    <strong id="time-stat">
+                        —
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ---------- Prime Number Results ---------- -->
+
+            <div
+                class="prime-results"
+                id="prime-results"
+                hidden
+            >
+
+
+                <div class="results-heading">
+
+                    <h3>
+                        Prime Numbers
+                    </h3>
+
+                    <button
+                        type="button"
+                        id="download-csv"
+                    >
+                        Download CSV
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="prime-list"
+                    id="prime-list"
+                ></div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             PRIME CHECKER
+             ================================================= -->
+
+        <section class="tool-card">
+
+
+            <!-- ---------- Heading ---------- -->
+
+            <div class="tool-heading">
+
+                <span class="tool-label">
+                    PRIME CHECKER
+                </span>
+
+                <h2>
+                    Is It Prime?
+                </h2>
+
+                <p>
+                    Enter an integer to check whether
+                    it is a prime number.
+                </p>
+
+            </div>
+
+
+            <!-- ---------- Checker Form ---------- -->
+
+            <form id="checker-form">
+
+                <div class="input-group">
+
+                    <input
+                        type="number"
+                        id="checker-number"
+                        min="0"
+                        step="1"
+                        placeholder="Enter a number"
+                        required
+                    >
+
+                    <button type="submit">
+                        Check
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- ---------- Checker Error Messages ---------- -->
+
+            <div
+                class="form-message"
+                id="checker-message"
+                hidden
+            ></div>
+
+
+            <!-- ---------- Checker Result ---------- -->
+
+            <div
+                class="checker-result"
+                id="checker-result"
+                hidden
+            ></div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+            Prime Explorer · Built with Python,
+            Flask &amp; JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+
+</body>
+
+</html>
